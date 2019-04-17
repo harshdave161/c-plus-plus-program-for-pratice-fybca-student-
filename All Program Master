@@ -1,0 +1,330 @@
+!! Made by harsh dave 2019©  !!
+
+!!
+Question number 4 !! write a program to find all prime number between 1 to 100 !!
+
+#include <iostream>
+using namespace std;
+
+int isPrimeNumber(int);
+
+int main()
+{
+   bool isPrime;
+   for(int n = 2; n < 100; n++) {
+      // isPrime will be true for prime numbers
+      isPrime = isPrimeNumber(n);
+
+      if(isPrime == true)
+         cout<<n<<" ";
+   }
+   return 0;
+}
+
+// Function that checks whether n is prime or not
+int isPrimeNumber(int n) {
+   bool isPrime = true;
+
+   for(int i = 2; i <= n/2; i++) {
+      if (n%i == 0) {
+         isPrime = false;
+         break;
+      }
+   }  
+   return isPrime;
+}
+
+!!
+
+!!
+Question number 12 !! write a program using inline function to calculate square og given number(no.) !!
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class square{
+public:
+    int num;
+    void getdata(){
+    cout<<" enter number to calculate square of number : ";
+    cin>>num;
+    }
+    inline int dispsquare(){
+    int squ;
+    squ=num*num;
+    return squ;
+    }
+    void disp(){
+    cout<<" square is : "<<dispsquare();
+    }
+};
+int main(void){
+square s1;
+s1.getdata();
+s1.dispsquare();
+s1.disp();
+}
+
+!!
+
+!!
+Question number 7 !! write a c++ program to show main function can be friend function of class !!
+
+#include<iostream>                             
+#define pi 3.1416
+class circle
+{
+    float radius;
+    void showarea();
+    friend int main();
+};
+void circle::showarea()
+{
+    cout<<"area="<<pi*radius*radius<<endl;
+}
+int main(void)
+{
+    circle x;
+    x.radius=5.00;
+    x.showarea();
+}
+
+!!
+
+!!
+question number 8 !! write a program to inherits class 'circle' , 'square' , 'triangle'  from base class 'shape' and calculate area in each class !!
+
+class shape{
+protected:
+    int radius,squ,base,height;
+public:
+    void setradius();
+    void setsquare();
+    void setbase();
+    void setheight();
+};
+void shape::setradius(){
+cout<<" Enter radius of circle : ";
+cin>>radius;
+}
+void shape::setsquare(){
+cout<<" Enter side of triangle : ";
+cin>>squ;
+}
+void shape::setbase(){
+cout<<" Enter base of triangle : ";
+cin>>base;
+}
+void shape::setheight(){
+cout<<" Enter height of triangle : ";
+cin>>height;
+}
+
+class square:public shape{
+public:
+    int area;
+    void dispsquarearea(){
+    area= squ * squ;
+    cout<<" enter side of square : "<<squ<<endl;
+    cout<<" area of square is : "<<area<<endl;
+        }
+};
+
+class circle:public shape{
+public:
+    int area;
+    void dispcirclearea(){
+    area=pi*radius*radius;
+    cout<<" radius is : "<<radius<<endl;
+    cout<<" circle radius is : "<<area<<endl;
+    }
+};
+
+class triangle:public shape{
+public:
+    int area;
+    void disptrianglearea(){
+    area=(0.5)*height*base;
+    cout<<" height of triangle : "<<height <<endl;
+    cout<< " base of traingle : "<<base <<endl;
+    cout<< " area of traingle is : "<<area <<endl;
+    }
+};
+
+int main(void){
+    cout<<" circle started "<<endl;
+circle c1;
+c1.setradius();
+c1.dispcirclearea();
+cout<<endl;
+cout<<" square started "<<endl;
+square s1;
+s1.setsquare();
+s1.dispsquarearea();
+cout<<endl;
+cout<<" triangle started "<<endl;
+triangle t1;
+t1.setbase();
+t1.setheight();
+t1.disptrianglearea();
+cout<<endl;
+}
+
+!!
+
+!!
+ question number 9 !! write c++ program to create pascal triangle !! 
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    int rows, coef = 1;
+
+    cout << "Enter number of rows: ";
+    cin >> rows;
+
+    for(int i = 0; i < rows; i++)// source by harsh dave 
+    {
+        for(int space = 1; space <= rows-i; space++)
+            cout <<"  ";
+
+        for(int j = 0; j <= i; j++)
+        {
+            if (j == 0 || i == 0)
+                coef = 1;
+            else
+                coef = coef*(i-j+1)/j;
+
+            cout << coef << "   ";
+        }
+        cout << endl;
+    }
+}
+
+!!
+
+!! write a c++ program to do multipication and addition of matrix !! Question number 3 !!
+
+!!
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int r, c, a[100][100], b[100][100], sum[100][100],muti[100][100], i, j;
+
+    cout << "Enter number of rows (between 1 and 100): ";
+    cin >> r;
+
+    cout << "Enter number of columns (between 1 and 100): ";
+    cin >> c;
+
+    cout << endl << "Enter elements of 1st matrix: " << endl;
+
+    // Storing elements of first matrix entered by user.
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element a " << i + 1 << j + 1 << " : ";
+           cin >> a[i][j];
+       }
+
+    // Storing elements of second matrix entered by user.
+    cout << endl << "Enter elements of 2nd matrix: " << endl;
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element b " << i + 1 << j + 1 << " : ";
+           cin >> b[i][j];
+       }
+
+    // Adding Two matrices
+    for(i = 0; i < r; ++i){
+        for(j = 0; j < c; ++j){
+            sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+         for(i=0;i<r;++i){
+            for(j=0;j<c;++j){
+                muti[i][j] = a[i][j] * b[i][j];
+            }
+         }
+
+    // Displaying the resultant addition matrix.
+    cout << endl << " Addition of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << sum[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+        cout << endl << " Mutiplication of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << muti[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+
+    return 0;
+}
+
+!!
+
+!!
+
+question number 2 !! write a c++ program to illustrate try-catch with division by zero exception !!
+
+#include<ostream>
+#include<istream>
+int main(void)
+{
+    float a,b,c;
+    cout<<" Program To illustrate try-catch with division by zero exception !! "<<endl;
+    cout << "enter first number" << endl;
+    cin >> a;
+
+    cout << "enter second number" << endl;
+    cin >> b;
+
+    try{
+
+
+     if(b == 0){
+
+        throw "error";
+        c = a/b;
+     }
+    }catch(...){
+
+         cout << "maybe you tried to divide by zero "<<endl;
+    }
+     c = a/b;
+     cout << c;
+}
+
+!!
+
+!! question number 1 !! write a c++ program to show '*' and '+' operator overloading !!
+
+!!
+
+!! question number 5 !! write a c++ program to compare string (lenght wise) using '<','>','==' operator !!
+
+!!
+
+!! question number 10 !! wap that read a textfile and copy content of that file to new file !!
+
+!!
+
+!! question number 11 !! write a c++ program to perform operation on file data. count lines,count words,and read character in a file 
+
+!!
+
+only 11 question are given !!
+made by harsh dave 2019©  !! 
