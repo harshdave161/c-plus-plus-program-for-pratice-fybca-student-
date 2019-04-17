@@ -1,6 +1,4 @@
-!! Made by harsh dave 2019©  !!
-
-!!
+﻿!!
 Question number 4 !! write a program to find all prime number between 1 to 100 !!
 
 #include <iostream>
@@ -312,9 +310,85 @@ int main(void)
 
 !! question number 1 !! write a c++ program to show '*' and '+' operator overloading !!
 
+#include <iostream>
+#include <string>
+using namespace std;
+
+class add {
+    public:
+        int var;
+        add() { }
+        void setval(){
+        cout<<" enter value :";
+        cin>>var;
+        }
+
+        add operator+(add &obj) {
+            add res;
+            res.var= this->var+obj.var;
+            return res;
+        }
+};
+class multi {
+    public:
+        int var;
+        multi() { }
+        void setval(){
+        cout<<" enter value :";
+        cin>>var;
+        }
+
+        multi operator*(multi &mul) {
+            multi multiply;
+            multiply.var= this->var*mul.var;
+            return multiply;
+        }
+};
+
+int main() {
+    add obj1, obj2;
+    obj1.setval();
+    obj2.setval();
+    add res = obj1+obj2;
+    cout <<" addition of object 1 and object 2 is :"<< res.var;
+    cout<<endl;
+    multi mul1, mul2;
+    mul1.setval();
+    mul2.setval();
+    multi multiply = mul1*mul2;
+    cout <<" multipication of object 1 and object 2 is :"<< multiply.var;
+    cout<<endl;
+}
+
 !!
 
 !! question number 5 !! write a c++ program to compare string (lenght wise) using '<','>','==' operator !!
+
+#include <iostream>
+#include<string.h>
+
+int main()
+{
+    string str_1,str_2;
+    cout<<" Enter string one : ";
+    getline(cin,str_1);
+    cout<<endl;
+    cout<<" Enter string two : ";
+    getline(cin,str_2);
+
+    if(str_1>str_2){
+        cout<<" string 1 is greater than string 2 "<<endl;
+    }
+    else if(str_1==str_2){
+        cout<<" string 1 and 2 are equal "<<endl;
+    }
+    else{
+        cout<<" string 2 is greater than string 1 "<<endl;
+    }
+
+
+	return 0;
+}
 
 !!
 
