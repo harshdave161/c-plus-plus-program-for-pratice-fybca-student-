@@ -7,6 +7,8 @@
 
 #include<iostream>                             
 #define pi 3.1416
+using namespace std;
+// made by harsh dave 2019 ©
 class circle
 {
     float radius;
