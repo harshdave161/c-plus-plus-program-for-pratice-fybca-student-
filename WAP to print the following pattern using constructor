@@ -1,0 +1,46 @@
+!! All imp question are uploaded by hack-tech(harsh dave) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+
+/* //   WAP to print the following pattern using constructor
+  1 
+  1 2 
+  1 2  3 
+  1 2  3  4
+  1 2  3  4  5    
+  // */
+
+  
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+class test{
+public:
+    int num;
+    test(int a){
+    num=a;
+    }
+    void loop(){
+     for(int i=0;i<num;i++)
+        {
+            for(int j=0;j<i;j++){
+              cout<<j+1;
+            }
+            cout<<endl;
+    }
+    }
+
+};
+    int main(void)
+    {
+test t1(6);
+t1.loop();
+    }
+
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
