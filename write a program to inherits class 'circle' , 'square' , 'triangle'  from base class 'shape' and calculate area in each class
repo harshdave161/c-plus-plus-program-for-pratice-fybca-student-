@@ -1,0 +1,87 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+class shape{
+protected:
+    int radius,squ,base,height;
+public:
+    void setradius();
+    void setsquare();
+    void setbase();
+    void setheight();
+};
+void shape::setradius(){
+cout<<" Enter radius of circle : ";
+cin>>radius;
+}
+void shape::setsquare(){
+cout<<" Enter side of triangle : ";
+cin>>squ;
+}
+void shape::setbase(){
+cout<<" Enter base of triangle : ";
+cin>>base;
+}
+void shape::setheight(){
+cout<<" Enter height of triangle : ";
+cin>>height;
+}
+
+class square:public shape{
+public:
+    int area;
+    void dispsquarearea(){
+    area= squ * squ;
+    cout<<" enter side of square : "<<squ<<endl;
+    cout<<" area of square is : "<<area<<endl;
+        }
+};
+
+class circle:public shape{
+public:
+    int area;
+    void dispcirclearea(){
+    area=pi*radius*radius;
+    cout<<" radius is : "<<radius<<endl;
+    cout<<" circle radius is : "<<area<<endl;
+    }
+};
+
+class triangle:public shape{
+public:
+    int area;
+    void disptrianglearea(){
+    area=(0.5)*height*base;
+    cout<<" height of triangle : "<<height <<endl;
+    cout<< " base of traingle : "<<base <<endl;
+    cout<< " area of traingle is : "<<area <<endl;
+    }
+};
+
+int main(void){
+    cout<<" circle started "<<endl;
+circle c1;
+c1.setradius();
+c1.dispcirclearea();
+cout<<endl;
+cout<<" square started "<<endl;
+square s1;
+s1.setsquare();
+s1.dispsquarearea();
+cout<<endl;
+cout<<" triangle started "<<endl;
+triangle t1;
+t1.setbase();
+t1.setheight();
+t1.disptrianglearea();
+cout<<endl;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
