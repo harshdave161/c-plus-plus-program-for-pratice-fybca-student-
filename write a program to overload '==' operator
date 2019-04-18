@@ -1,0 +1,38 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 © 
+class over {
+public:
+    int var;
+    over (){}
+    over(int a){
+    var=a;
+    }
+    bool operator ==(over mul){
+    return this->var == mul.var;
+    }
+};
+int main(void){
+over obj1(10),obj2(210);
+ if (obj1==obj2)
+    {
+    cout<<" both object are same !!"<<endl;
+ }
+ else{
+    cout<<"both are different "<<endl;
+ }
+ return 0;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
