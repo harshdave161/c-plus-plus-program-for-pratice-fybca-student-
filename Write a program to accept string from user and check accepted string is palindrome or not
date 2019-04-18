@@ -1,7 +1,6 @@
 !! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
 !! // = single line comment just ignore that !!
 !! /*   */ = multi-line comment just ignore this too its only used for more information !!
-!!
 
 #include<iostream>
 #include<conio.h>
