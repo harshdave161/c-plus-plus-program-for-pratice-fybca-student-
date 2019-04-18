@@ -1,0 +1,37 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class square{
+public:
+    int num;
+    void getdata(){
+    cout<<" enter number to calculate square of number : ";
+    cin>>num;
+    }
+    inline int dispsquare(){
+    int squ;
+    squ=num*num;
+    return squ;
+    }
+    void disp(){
+    cout<<" square is : "<<dispsquare();
+    }
+};
+int main(void){
+square s1;
+s1.getdata();
+s1.dispsquare();
+s1.disp();
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
