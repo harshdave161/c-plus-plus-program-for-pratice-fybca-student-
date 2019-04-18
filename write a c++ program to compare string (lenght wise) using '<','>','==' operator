@@ -1,0 +1,39 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include <iostream>
+#include<string.h>
+using namespace std;
+// made by harsh dave 2019 ©
+int main()
+{
+    string str_1,str_2;
+    cout<<" Enter string one : ";
+    getline(cin,str_1);
+    cout<<endl;
+    cout<<" Enter string two : ";
+    getline(cin,str_2);
+
+    if(str_1>str_2){
+        cout<<" string 1 is greater than string 2 "<<endl;
+    }
+    else if(str_1==str_2){
+        cout<<" string 1 and 2 are equal "<<endl;
+    }
+    else{
+        cout<<" string 2 is greater than string 1 "<<endl;
+    }
+
+
+	return 0;
+}
+
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
