@@ -1,0 +1,29 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+int main() {
+	int number, reverse = 0;
+	cout<<"Input a Number to Reverse and press Enter: ";
+	cin>> number;
+	// Taking Input Number in variable number
+	for ( ; number!= 0 ; ) {
+		reverse = reverse * 10;
+		reverse = reverse + number%10;
+		number = number/10;
+	}
+	cout<<"New Reversed Number is:  "<<reverse;
+	return 0;
+}
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
