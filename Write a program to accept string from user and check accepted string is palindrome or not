@@ -1,0 +1,65 @@
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+!!
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+
+int main()
+
+{
+
+    char str1[20], str2[20];
+
+    int i, j, len = 0, flag = 0;
+
+    cout << "Enter the string : ";
+
+    gets(str1);
+
+    len = strlen(str1) - 1;
+
+    for (i = len, j = 0; i >= 0 ; i--, j++)
+
+        str2[j] = str1[i];
+
+    if (strcmp(str1, str2))
+
+        flag = 1;
+
+    if (flag == 1)
+
+        cout << str1 << " is not a palindrome";
+
+    else
+
+        cout << str1 << " is a palindrome";
+
+    return 0;
+
+}
+
+//comment
+/*
+runtime test for program !!
+Case 1 :
+Enter the string : nun
+nun is a palindrome
+ 
+Case 2 :
+Enter the string : fast                                                                                                        
+fast is not a palindrome
+ 
+Case 3 :
+Enter the string : 121                                                                                                         
+121 is a palindrome
+*/
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
