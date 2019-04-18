@@ -1,0 +1,60 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+// made by harsh dave 2019 ©
+class add {
+    public:
+        int var;
+        add() { }
+        void setval(){
+        cout<<" enter value :";
+        cin>>var;
+        }
+
+        add operator+(add &obj) {
+            add res;
+            res.var= this->var+obj.var;
+            return res;
+        }
+};
+class multi {
+    public:
+        int var;
+        multi() { }
+        void setval(){
+        cout<<" enter value :";
+        cin>>var;
+        }
+
+        multi operator*(multi &mul) {
+            multi multiply;
+            multiply.var= this->var*mul.var;
+            return multiply;
+        }
+};
+
+int main() {
+    add obj1, obj2;
+    obj1.setval();
+    obj2.setval();
+    add res = obj1+obj2;
+    cout <<" addition of object 1 and object 2 is :"<< res.var;
+    cout<<endl;
+    multi mul1, mul2;
+    mul1.setval();
+    mul2.setval();
+    multi multiply = mul1*mul2;
+    cout <<" multipication of object 1 and object 2 is :"<< multiply.var;
+    cout<<endl;
+}
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
