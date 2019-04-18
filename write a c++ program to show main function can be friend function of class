@@ -1,0 +1,31 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+
+#include<iostream>                             
+#define pi 3.1416
+class circle
+{
+    float radius;
+    void showarea();
+    friend int main();
+};
+void circle::showarea()
+{
+    cout<<"area="<<pi*radius*radius<<endl;
+}
+int main(void)
+{
+    circle x;
+    x.radius=5.00;
+    x.showarea();
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
