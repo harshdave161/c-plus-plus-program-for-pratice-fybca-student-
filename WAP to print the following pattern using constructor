@@ -1,8 +1,9 @@
+/*
 !! All imp question are uploaded by hack-tech(harsh dave) for c++ pratical exam pratice !!
 !! // = single line comment just ignore that !!
 !! /*   */ = multi-line comment just ignore this too its only used for more information !!
 
-/* //   WAP to print the following pattern using constructor
+ //   WAP to print the following pattern using constructor
   1 
   1 2 
   1 2  3 
@@ -41,6 +42,8 @@ test t1(6);
 t1.loop();
     }
 
+/*
 !! All imp question are present for c++ pratical exam pratice !!
 made by harsh dave 2019©  !! 
 !! PEACE OUT !! YOLO YOLO !!
+*/
