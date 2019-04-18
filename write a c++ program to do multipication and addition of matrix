@@ -1,0 +1,76 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include <iostream>
+using namespace std;
+// made by harsh dave 2019 ©
+int main()
+{
+    int r, c, a[100][100], b[100][100], sum[100][100],muti[100][100], i, j;
+
+    cout << "Enter number of rows (between 1 and 100): ";
+    cin >> r;
+
+    cout << "Enter number of columns (between 1 and 100): ";
+    cin >> c;
+
+    cout << endl << "Enter elements of 1st matrix: " << endl;
+
+    // Storing elements of first matrix entered by user.
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element a " << i + 1 << j + 1 << " : ";
+           cin >> a[i][j];
+       }
+
+    // Storing elements of second matrix entered by user.
+    cout << endl << "Enter elements of 2nd matrix: " << endl;
+    for(i = 0; i < r; ++i)
+       for(j = 0; j < c; ++j)
+       {
+           cout << "Enter element b " << i + 1 << j + 1 << " : ";
+           cin >> b[i][j];
+       }
+
+    // Adding Two matrices
+    for(i = 0; i < r; ++i){
+        for(j = 0; j < c; ++j){
+            sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+         for(i=0;i<r;++i){
+            for(j=0;j<c;++j){
+                muti[i][j] = a[i][j] * b[i][j];
+            }
+         }
+
+    // Displaying the resultant addition matrix.
+    cout << endl << " Addition of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << sum[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+        cout << endl << " Mutiplication of two matrix is: " << endl;
+    for(i = 0; i < r; ++i)
+        for(j = 0; j < c; ++j)
+        {
+            cout << muti[i][j] << "  ";
+            if(j == c - 1)
+                cout << endl;
+        }
+
+    return 0;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
