@@ -1,4 +1,316 @@
-!! All imp question are present for c++ pratical exam pratice !!
+﻿!! All imp question are uploaded by hack-tech for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+!!
+
+
+//   WAP to print the following pattern using constructor
+  1 
+  1 2 
+  1 2  3 
+  1 2  3  4
+  1 2  3  4  5     //*/
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+class test{
+public:
+    int num;
+    test(int a){
+    num=a;
+    }
+    void loop(){
+     for(int i=0;i<num;i++)
+        {
+            for(int j=0;j<i;j++){
+              cout<<j+1;
+            }
+            cout<<endl;
+    }
+    }
+
+};
+    int main(void)
+    {
+test t1(6);
+t1.loop();
+    }
+
+
+!!
+
+//  Write a program to accept string from user and check accepted string is palindrome or not    //
+
+#include<iostream>
+#include<conio.h>
+#include<string.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+
+int main()
+
+{
+
+    char str1[20], str2[20];
+
+    int i, j, len = 0, flag = 0;
+
+    cout << "Enter the string : ";
+
+    gets(str1);
+
+    len = strlen(str1) - 1;
+
+    for (i = len, j = 0; i >= 0 ; i--, j++)
+
+        str2[j] = str1[i];
+
+    if (strcmp(str1, str2))
+
+        flag = 1;
+
+    if (flag == 1)
+
+        cout << str1 << " is not a palindrome";
+
+    else
+
+        cout << str1 << " is a palindrome";
+
+    return 0;
+
+}
+//comment
+/*
+runtime test for program !!
+Case 1 :
+Enter the string : nun
+nun is a palindrome
+ 
+Case 2 :
+Enter the string : fast                                                                                                        
+fast is not a palindrome
+ 
+Case 3 :
+Enter the string : 121                                                                                                         
+121 is a palindrome
+*/
+!!
+
+!!
+//  Write a program to enter number from user  and display it in reverse order   //
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+int main() {
+	int number, reverse = 0;
+	cout<<"Input a Number to Reverse and press Enter: ";
+	cin>> number;
+	// Taking Input Number in variable number
+	for ( ; number!= 0 ; ) {
+		reverse = reverse * 10;
+		reverse = reverse + number%10;
+		number = number/10;
+	}
+	cout<<"New Reversed Number is:  "<<reverse;
+	return 0;
+}
+
+!!
+// Write a program to find fibonicci series of a number //
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+
+    int main() {
+    	int range, first = 0, second = 1, fibonicci=0;
+    	cin >> range;
+    	cout << "Fibonicci Series upto " << range << " Terms "<< endl;
+    	for ( int c = 0 ; c < range ; c++ ) {
+    		if ( c <= 1 )
+    		             fibonicci = c; else {
+    			fibonicci = first + second;
+    			first = second;
+    			second = fibonicci;
+    		}
+    		cout << fibonicci <<" ";
+    	}
+    	return 0;
+    }
+
+!!
+
+// Write a program to find factorial of a number //
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+    int main() {
+    	int num,factorial=1;
+    	cout<<" Enter Number To Find Its Factorial:  ";
+    	cin>>num;
+    	for (int a=1;a<=num;a++) {
+    		factorial=factorial*a;
+    	}
+    	cout<<"Factorial of Given Number is ="<<factorial<<endl;
+    	return 0;
+    }
+
+!!
+
+// program to find amstrong number //
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+int main()
+{
+  int origNum, num, rem, sum = 0;
+  cout << "Enter a positive  integer: ";
+  cin >> origNum;
+
+  num = origNum;
+
+  while(num != 0)
+  {
+      rem = num % 10;
+      sum += rem * rem * rem;
+      num /= 10;
+  }
+
+  if(sum == origNum){
+    cout << origNum << " is an Armstrong number.";
+  }
+  else{
+    cout << origNum << " is not an Armstrong number.";
+  }
+  return 0;
+}
+
+!!
+
+// Write a program to overload '>>' and '<<' operators//
+// simple and hard logic program overall //
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+class Point
+{
+public:
+    double m_x, m_y, m_z;
+    /* //can be done like this
+      point(double x=0.0,double  y=0.0, double z=0.0){
+      m_x=x;
+      m_y=y;
+      m_z=z;
+      }
+      // this method is simple one
+      */
+     // member initialization list method
+
+   /* Point(double x=0.0, double y=0.0, double z=0.0): m_x(x), m_y(y), m_z(z)
+    {
+    }*/
+
+    friend std::ostream& operator<< (std::ostream &out, const Point &point)
+    {
+    out << "Point(" << point.m_x << ", " << point.m_y << ", " << point.m_z << ")";
+
+    return out;
+}
+
+    friend std::istream& operator>> (std::istream &in, Point &point)
+    {
+    // note that parameter point must be non-const so we can modify the class members with the input values
+    in >> point.m_x;
+    in >> point.m_y;
+    in >> point.m_z;
+
+    return in;
+}
+};
+
+int main()
+{
+    std::cout << "Enter a point: \n";
+
+    Point point;
+    std::cin >> point;
+
+    std::cout << "You entered: " << point << '\n';
+
+    return 0;
+}
+
+!!
+
+//  Write a program to overload '++' and '--' operators //
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+class test {
+public:
+    int varp,varm;
+    void getvalp(){
+    cout<<" Enter number for ++ overloading :";
+    cin>>varp;
+    }
+    void getvalm(){
+    cout<<" Enter number for -- overloading :";
+    cin>>varm;
+    }
+    int operator ++(){
+    ++varp;
+    return varp;
+    }
+    void showvalp(){
+    cout<<" Value after overloading is : "<<varp<<endl;
+    }
+    int operator --()
+    {
+        --varm;
+        return varm;
+    }
+    void showvalm(){
+    cout<<" Value after overloading is : "<<varm<<endl;
+    }
+};
+int main(void){
+cout<<"\t\t ++ Overloding Started "<<endl<<endl;
+test t1;
+t1.getvalp();
+++t1;
+t1.showvalp();
+cout<<"\t\t -- Overloding Started "<<endl<<endl;
+test t2;
+t2.getvalm();
+--t2;
+t2.showvalm();
+ return 0;
+}
+
+!!
+
 !!
 Question number 4 !! write a program to find all prime number between 1 to 100 !!
 
