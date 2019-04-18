@@ -1,0 +1,40 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<ostream>
+#include<istream>
+using namespace std;
+// made by harsh dave 2019 ©
+int main(void)
+{
+    float a,b,c;
+    cout<<" Program To illustrate try-catch with division by zero exception !! "<<endl;
+    cout << "enter first number" << endl;
+    cin >> a;
+
+    cout << "enter second number" << endl;
+    cin >> b;
+
+    try{
+
+
+     if(b == 0){
+
+        throw "error";
+        c = a/b;
+     }
+    }catch(...){
+
+         cout << "maybe you tried to divide by zero "<<endl;
+    }
+     c = a/b;
+     cout << c;
+}
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
