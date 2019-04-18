@@ -1,6 +1,8 @@
+/*
 !! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
 !! // = single line comment just ignore that !!
 !! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
 
 #include<iostream>
 #include<conio.h>
@@ -43,7 +45,7 @@ int main()
     return 0;
 
 }
-
+/*
 //comment
 /*
 runtime test for program !!
@@ -62,3 +64,4 @@ Enter the string : 121
 !! All imp question are present for c++ pratical exam pratice !!
 made by harsh dave 2019©  !! 
 !! PEACE OUT !! YOLO YOLO !!
+*/
