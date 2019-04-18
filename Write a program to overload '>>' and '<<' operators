@@ -1,0 +1,65 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+// simple and hard logic program overall //
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+class Point
+{
+public:
+    double m_x, m_y, m_z;
+    /* //can be done like this
+      point(double x=0.0,double  y=0.0, double z=0.0){
+      m_x=x;
+      m_y=y;
+      m_z=z;
+      }
+      // this method is simple one
+      */
+     // member initialization list method
+
+   /* Point(double x=0.0, double y=0.0, double z=0.0): m_x(x), m_y(y), m_z(z)
+    {
+    }*/
+
+    friend std::ostream& operator<< (std::ostream &out, const Point &point)
+    {
+    out << "Point(" << point.m_x << ", " << point.m_y << ", " << point.m_z << ")";
+
+    return out;
+}
+
+    friend std::istream& operator>> (std::istream &in, Point &point)
+    {
+    // note that parameter point must be non-const so we can modify the class members with the input values
+    in >> point.m_x;
+    in >> point.m_y;
+    in >> point.m_z;
+
+    return in;
+}
+};
+
+int main()
+{
+    std::cout << "Enter a point: \n";
+
+    Point point;
+    std::cin >> point;
+
+    std::cout << "You entered: " << point << '\n';
+
+    return 0;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
