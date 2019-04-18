@@ -1,0 +1,56 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+class test {
+public:
+    int varp,varm;
+    void getvalp(){
+    cout<<" Enter number for ++ overloading :";
+    cin>>varp;
+    }
+    void getvalm(){
+    cout<<" Enter number for -- overloading :";
+    cin>>varm;
+    }
+    int operator ++(){
+    ++varp;
+    return varp;
+    }
+    void showvalp(){
+    cout<<" Value after overloading is : "<<varp<<endl;
+    }
+    int operator --()
+    {
+        --varm;
+        return varm;
+    }
+    void showvalm(){
+    cout<<" Value after overloading is : "<<varm<<endl;
+    }
+};
+int main(void){
+cout<<"\t\t ++ Overloding Started "<<endl<<endl;
+test t1;
+t1.getvalp();
+++t1;
+t1.showvalp();
+cout<<"\t\t -- Overloding Started "<<endl<<endl;
+test t2;
+t2.getvalm();
+--t2;
+t2.showvalm();
+ return 0;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
