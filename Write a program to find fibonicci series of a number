@@ -1,0 +1,33 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+
+    int main() {
+    	int range, first = 0, second = 1, fibonicci=0;
+    	cin >> range;
+    	cout << "Fibonicci Series upto " << range << " Terms "<< endl;
+    	for ( int c = 0 ; c < range ; c++ ) {
+    		if ( c <= 1 )
+    		             fibonicci = c; else {
+    			fibonicci = first + second;
+    			first = second;
+    			second = fibonicci;
+    		}
+    		cout << fibonicci <<" ";
+    	}
+    	return 0;
+    }
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
