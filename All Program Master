@@ -400,5 +400,37 @@ int main()
 
 !!
 
+
+question number 12 // write a program to overload '==' operator //
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 © 
+class over {
+public:
+    int var;
+    over (){}
+    over(int a){
+    var=a;
+    }
+    bool operator ==(over mul){
+    return this->var == mul.var;
+    }
+};
+int main(void){
+over obj1(10),obj2(210);
+ if (obj1==obj2)
+    {
+    cout<<" both object are same !!"<<endl;
+ }
+ else{
+    cout<<"both are different "<<endl;
+ }
+ return 0;
+}
+
+!!
+
 only 11 question are given !!
 made by harsh dave 2019©  !! 
