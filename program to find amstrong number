@@ -1,0 +1,40 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+
+int main()
+{
+  int origNum, num, rem, sum = 0;
+  cout << "Enter a positive  integer: ";
+  cin >> origNum;
+
+  num = origNum;
+
+  while(num != 0)
+  {
+      rem = num % 10;
+      sum += rem * rem * rem;
+      num /= 10;
+  }
+
+  if(sum == origNum){
+    cout << origNum << " is an Armstrong number.";
+  }
+  else{
+    cout << origNum << " is not an Armstrong number.";
+  }
+  return 0;
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
