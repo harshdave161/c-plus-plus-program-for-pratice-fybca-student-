@@ -18,7 +18,7 @@ cout<<" Enter radius of circle : ";
 cin>>radius;
 }
 void shape::setsquare(){
-cout<<" Enter side of triangle : ";
+cout<<" Enter side's of Square : ";
 cin>>squ;
 }
 void shape::setbase(){
