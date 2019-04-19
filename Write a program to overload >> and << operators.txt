@@ -24,18 +24,25 @@ public:
       */
      // member initialization list method
 
-   /* Point(double x=0.0, double y=0.0, double z=0.0): m_x(x), m_y(y), m_z(z)
+   Point(double x=0.0, double y=0.0, double z=0.0): m_x(x), m_y(y), m_z(z)
     {
-    }*/
+    }
 
-    friend std::ostream& operator<< (std::ostream &out, const Point &point)
+    friend std::ostream& operator<< (std::ostream &out, const Point &point);
+      
+
+    friend std::istream& operator>> (std::istream &in, Point &point);
+    
+};
+
+ std::ostream& operator<< (std::ostream &out, const Point &point)
+
     {
     out << "Point(" << point.m_x << ", " << point.m_y << ", " << point.m_z << ")";
 
     return out;
 }
-
-    friend std::istream& operator>> (std::istream &in, Point &point)
+  std::istream& operator>> (std::istream &in, Point &point)
     {
     // note that parameter point must be non-const so we can modify the class members with the input values
     in >> point.m_x;
@@ -44,7 +51,6 @@ public:
 
     return in;
 }
-};
 
 int main()
 {
