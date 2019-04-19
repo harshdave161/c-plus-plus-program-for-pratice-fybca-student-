@@ -8,26 +8,30 @@
 #include<string.h>
 using namespace std;
 // made by harsh dave 2019 ©
-int main()
-{
-    string str_1,str_2;
-    cout<<" Enter string one : ";
-    getline(cin,str_1);
-    cout<<endl;
-    cout<<" Enter string two : ";
-    getline(cin,str_2);
+int main(void)
+ char str1[100];
+ char str2[100];
+ cout<<" Enter values string 1 :";
+ gets(str1);
+ cout<<" Enter values string 2 :";
+ gets(str2);
 
-    if(str_1>str_2){
-        cout<<" string 1 is greater than string 2 "<<endl;
+ int a,b;
+  cout<<" length of string 1 is : "<<strlen(str1)<<endl;
+  cout<<" length of string 2 is : "<<strlen(str2)<<endl;
+ a=strlen(str1);
+ b=strlen(str2);
+
+   if(a>b)  {
+        cout<<" string 1 is greater than string 2 !!"<<endl;
     }
-    else if(str_1==str_2){
-        cout<<" string 1 and 2 are equal "<<endl;
+  else if(a==b)
+  {
+        cout<<" string 1 and 2 are equal !!"<<endl;
     }
     else{
-        cout<<" string 2 is greater than string 1 "<<endl;
+        cout<<" string 2 is greater than string 1 !!"<<endl;
     }
-
-
 	return 0;
 }
 
