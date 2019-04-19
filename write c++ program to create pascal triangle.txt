@@ -4,6 +4,7 @@
 !! /*   */ = multi-line comment just ignore this too its only used for more information !!
 */
 
+/* complex version */
 
 #include <iostream>
 using namespace std;
@@ -33,6 +34,30 @@ int main(void)
     }
 }
 
+/* simple version made by this formula   n=n*(rol-col)/(col+1);  this formula changes game to print pascal triangle !! */
+
+#include<iostream>
+#include<conio.h>
+// made by harsh dave 2019 ©
+int main(void){
+int row,col,space,no,n;
+cout<<" Enter number of rows : ";
+cin>>no;
+for(row=0;row<no;row++) //enternal loop for rows
+{
+    for(space=0;space<(no-row);space++) /* internal loop for printing space and space<(no-row) tends to -- the loop and prints space // just for more information only for understandable by harsh // */
+    {
+        cout<<" ";
+    }
+    n=1;  // n should be assign here inside the loop this is imp point !! */
+    for(col=0;col<=row;col++) // main formula for cols and triangle printing goes here 
+    {
+        cout<<" "<<n;
+        n=n*(row-col)/(col+1);
+    }
+    cout<<endl;
+}
+}
 /*
 !! All imp question are present for c++ pratical exam pratice !!
 made by harsh dave 2019©  !! 
