@@ -1,0 +1,46 @@
+!! All imp question are uploaded by hack-tech for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+!!
+
+
+#include<iostream>
+#include<fstream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+int main(void)
+{
+fstream st;
+st.open("files\\data.txt",ios::out);
+if(!st){
+cout<<" file creation failed "<<endl;
+}
+else{
+    cout<<"new file created "<<endl;
+    st<<"hello firends";
+st.seekp(0,ios::cur);
+cout<<" as per tellp file pointer position is "<<st.tellp()<<endl;
+st.close();
+}
+st.open("files\\data.txt",ios::in);
+if(!st){
+    cout<<"no such file "<<endl;
+}
+else
+    {
+    char ch;
+    st.seekg(5,ios::beg);
+    cout<<" as per tellg file pointer position is "<<st.tellg()<<endl;
+    cout<<endl;
+    st.seekg(1,ios::cur);
+    cout<<" as per tellg file pionter postion is "<<st.tellg()<<endl;
+    st.close();
+}
+}
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
