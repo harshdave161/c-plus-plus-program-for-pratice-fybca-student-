@@ -1,0 +1,43 @@
+!! All imp question are uploaded by hack-tech for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+!!
+/* basic program to startup understanding file handling */
+
+#include<iostream>
+#include<fstream>
+#include<conio.h>
+#include<stdio.h>
+using namespace std;
+// made by harsh dave 2019 ©
+int main(void)
+{
+fstream st;
+st.open("data.txt",ios::out);   /* use \\ to get inside the directory and it open's the file !! out mode open for writing only */
+if(!st){
+    cout<<" file creation failed "<<endl;
+}
+else{
+    cout<<" file created sucessfully : "<<endl;
+    st<<"hello world"<<endl;
+    st.close();
+}
+fstream in;
+in.open("data.txt",ios::in);    /* open for reading mode only */
+if(!in){
+    cout<<" no file found "<<endl;
+}
+else{
+ char ch;
+ while(!in.eof()){                    /* eof end of file function play th most important game here !! to copy the conetent of file till end of eof() */
+        in>>ch;
+        cout<<ch;
+ }
+ in.close();
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
