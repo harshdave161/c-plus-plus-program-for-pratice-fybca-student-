@@ -1,0 +1,63 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+#include<iostream>
+#include<fstream>
+#include<string.h>
+using namespace std;
+// made by harsh dave 2019 © 
+// hardest program uptill now !! enjoy !!
+int main(void)
+{
+    ofstream out;
+    out.open("files\\data.txt",ios::out);
+    out<<"harsh dave"<<endl;
+out<<"harsh dave"<<endl;
+out<<"harsh dave"<<endl;out<<"harsh dave"<<endl;
+    out.close();
+
+
+// for reading charater in file // damn its hard
+     ifstream fin;
+     fin.open("files\\data.txt");
+     char ch;
+     int coc=0;
+     while(!fin.eof()){
+        fin.get(ch);
+        coc++;
+     }
+     cout<<"the number of characters : "<<coc-4<<endl;
+     fin.close();
+
+
+//for reading words in file // same damn its hard
+ ifstream finn;
+     finn.open("files\\data.txt");
+     char word[30];
+     int count=0;
+     while(!finn.eof()){
+        finn>>word;
+        count++;
+     }
+     cout<<"the number of words : "<<count-1<<endl;
+     finn.close();
+    // for reading lines in file //
+ ifstream finnn;
+     finnn.open("files\\data.txt");
+     char str[30];
+     int col=0;
+     while(!finnn.eof()){
+        finnn.getline(str,30);
+        col++;
+     }
+     cout<<"the number of lines : "<<col-1<<endl;
+     finnn.close();
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
