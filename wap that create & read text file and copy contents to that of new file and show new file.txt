@@ -1,0 +1,70 @@
+/*
+!! All imp question are uploaded by hack-tech( Harsh Dave ) for c++ pratical exam pratice !!
+!! // = single line comment just ignore that !!
+!! /*   */ = multi-line comment just ignore this too its only used for more information !!
+*/
+
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+#include<stdio.h>
+#include<cstdlib>
+using namespace std;
+//made by harsh dave ©  damn hard
+// second hardest program uptill now !! enjoy !!
+int main(void){
+ofstream so;
+char line1[50],line2[50];
+so.open("oldfile.txt",ios::out);
+cout<<" enter line 1 :";
+gets(line1);
+so<<line1<<endl;
+cout<<" enter line 2 :";
+gets(line2);
+so<<line2<<endl;
+so.close();
+cout<<" reading old file "<<endl;
+ifstream st;
+ofstream sf;
+char ch,fname1[20],fname2[20];
+cout<<"enter source file name with extention oldfile.txt: ";
+gets(fname1);
+st.open(fname1);
+if(!st){
+    cout<<"error while opening file : ";
+    exit(1);
+}
+cout<<" destination file name with extention newfile.txt : ";
+gets(fname2);
+sf.open(fname2);
+if(!sf){
+    cout<<"error while opening target file :";
+    sf.close();
+    exit(2);
+    }
+while(st.eof()==0){
+    st>>ch;
+    sf<<ch;
+}
+cout<<"file copied successfully ..!!"<<endl;
+st.close();
+sf.close();
+cout<<"reading new file which is created by coping old file "<<endl;
+ifstream inf;
+inf.open("newfile.txt",ios::in);
+string newname;
+if(!inf){
+    cout<<"error no new file with name newfile.txt "<<endl;
+    exit(3);
+}
+while(getline(inf,newname)){
+    cout<<" "<<newname<<endl;
+}
+}
+
+/*
+!! All imp question are present for c++ pratical exam pratice !!
+made by harsh dave 2019©  !! 
+!! PEACE OUT !! YOLO YOLO !!
+*/
